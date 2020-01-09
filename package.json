@@ -1,0 +1,18 @@
+{
+  "name": "dockerizing-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "docker build -t thegiantotter/node-web-app .",
+    "run": "docker run -p 3000:8080 -d --name web_app_3000 thegiantotter/node-web-app",
+    "kill": "docker kill web_app_3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
