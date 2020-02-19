@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "build": "docker build -t thegiantotter/node-web-app .",
     "run": "docker run -p 3000:8080 -d --name web_app_3000 thegiantotter/node-web-app",
-    "kill": "docker kill web_app_3000"
+    "kill": "docker kill web_app_3000",
+    "rm": "docker rm web_app_3000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "nodemon": "^2.0.2"
   }
 }
